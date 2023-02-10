@@ -1,2 +1,3 @@
 
-node_modules/@discordjs/util/dist/index.js.map
+node_modules
+config.json
