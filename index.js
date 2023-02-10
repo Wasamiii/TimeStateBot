@@ -1,9 +1,9 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const {Client, Collection, Events, GatewayIntentBits} = require("discord.js");
+const { token } = require('./config.json');
 const api = require('./src/api.js');
 const commands = require('./src/commands/commands.js');
-const { log } = require('node:console');
 
 const client = new Client({
     intents: [
@@ -12,14 +12,10 @@ const client = new Client({
         GatewayIntentBits.MessageContent
     ]   
 });
-const Token = {Token};
+const Token = {token: token};
+};
 client.on("ready", () =>{
     console.log("Client ready");
-    /*
-    Set une activité discord
-    //client.user.setActivity('connecter la guilde');
-    api.callApi();
-    */
 })
 client.on(Events.InteractionCreate, async interaction =>{
 
