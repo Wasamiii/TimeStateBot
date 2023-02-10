@@ -12,7 +12,7 @@ const client = new Client({
         GatewayIntentBits.MessageContent
     ]   
 });
-const Token = "MTA1MTE0OTM0MDA3NDMxMTY4MA.GKkR65.L8OhE_MO_rVrqmo3fCtVl4izZgJMjizoP9Lf-4";
+const Token = {Token};
 client.on("ready", () =>{
     console.log("Client ready");
     /*
